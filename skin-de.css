@@ -1,0 +1,2888 @@
+/*
+
+SKIN -7 - Old Ages Default
+
+A short on on how to make this skin availble for other languages
+
+Please note that images/icons/lang/XX  directory contains language
+the specific icons ep.gif, gold.gif and fame.gif.
+
+If you modify these icons, please put an appropiate copy in each of
+this directory.
+
+If you want to use language specif images in your css file, you can
+use the phrase '/xLANGx/' (remove the ' and replace x by *).
+This is  for example replaced by 'lang/en' (without the ').
+
+E.g. to use an language specific Icon for the eps, use (replace the x by *):
+
+    url(images/icons/lang/xLANGx/ep.png)
+
+For English players, this becomes:
+    url(images/icons/lang/en/ep.png)
+
+For German players, it becomes:
+    url(images/icons/lang/de/ep.png)
+
+Then put an ep.png icon in the directories images/icons/lang/de /en /..
+
+*/
+
+
+/******************************************************************************
+ * This file contains the parts of the css design that will change between
+ * different skins.
+ */
+
+
+/*********************************************************
+ * Ajax Dialogs
+ *********************************************************/
+.ajax_window {
+  border: ridge #F0A015 5px;
+  background-color: #444;
+  background: transparent url(images/page/ajax_dialog_bg.jpg) repeat scroll 0 0;
+}
+
+.ajax_window_title {
+    padding-right: 5px;
+}
+
+.ajax_window_title > h1 {
+    color: #F0A015;
+}
+
+.ajax_window_content {
+    border-top: solid #F0A015 1px;
+    padding: 5px;
+    padding-top: 10px;
+}
+
+.ajax_window_buttons {
+    border-top: solid #F0A015 1px;
+    padding: 5px;
+    padding-top: 15px;
+}
+
+
+
+
+
+/*********************************************************
+ * General settings
+ *********************************************************/
+
+
+html,body {
+   margin:0;
+   padding:0;
+   width:100%;
+   height:100%;
+   border:none
+}
+
+body {
+    height:100%;
+    font-size:                14px;
+    font-family:              Arial, Helvetica, sans-serif;
+    text-decoration:          none;
+    color:                    #FFFFDD;
+}
+
+html {
+    background-color: #aa9663;
+}
+
+
+.page_bg_with_image { background: url(images/background.jpg) repeat;}
+.page_bg_without_image { }
+
+
+
+#page-border {
+  width:100%;height:100%;
+}
+
+div.gadget_icon {
+   display: inline;
+}
+
+.gadget_icon.icon_help {
+  padding-right: 2px;
+}
+
+
+/*
+.gadget_icon.icon_forums_all {
+    display: none;
+}
+*/
+
+.gadget_fixed_container {
+    height: 100%;
+    overflow-x: hidden;
+}
+
+#gadgettable-padding-top {height:10px;}
+#gadgettable-padding-left {width:20px;}
+#gadgettable-padding-right {width:10px;}
+#gadgettable-padding-bottom {height:10px;}
+
+#gadgettable-padding-top.ad_banner_page_top {
+    background-image: url(images/ad_top_page.gif);
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 120px;
+    vertical-align: middle;
+}
+
+#gadgettable-top.ad_banner_page_top {
+
+}
+
+#gadgettable-top       {
+    background: url(images/header.jpg);
+    background-repeat: repeat-x;
+    color: #c1976a;
+    height: 78px;
+}
+
+#gadgettable-top-gadgets {
+    background: url(images/header_left.gif) no-repeat bottom left;
+    height: 100%;
+}
+/*
+#gadgettable-top-gadgets {
+    background: url(images/header_right.gif) no-repeat bottom right;
+    height: 100%;
+}
+*/
+
+#gadgettable-left       {
+    background: url(images/left.jpg) repeat-y;
+    height: 100%;
+}
+
+#gadgettable-left-gadgets {
+    background: url(images/left_bottom.jpg) no-repeat left bottom;
+    height: 100%;
+}
+
+#gadgettable-right       {
+    background: url(images/right.jpg);
+    background-repeat: repeat-y;
+    height: 100%;
+    width: 187px;
+}
+
+#gadgettable-right-gadgets {
+    background: url(images/right_bottom.jpg);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    height: 100%;
+}
+
+#gadgettable-right-gadgets .hero {
+    padding-top: 0px;
+}
+
+.gadgettable-column {height:100%;}
+
+
+.main_content .gadget_body {padding-left:0px;}
+
+.main_content .popup { padding-left: 0.5em; padding-right: 0.5em; }
+
+.main_content-border-table {
+    margin-top: 15px;
+}
+
+.main_content-border-table-top {background: url(images/main-content/content-top-title.gif) repeat-x;}
+.main_content-border-table-top-left {background: url(images/main-content/content-top-left.gif) no-repeat;min-width: 44px;height: 52px;}
+.main_content-border-table-top-right {background: url(images/main-content/content-top-right.gif) no-repeat;min-width: 38px;height: 52px;}
+
+.main_content-border-table-center {background: url(images/main-content/content-center.gif);}
+.main_content-border-table-left {background: url(images/main-content/content-center-left.gif) repeat-y;}
+.main_content-border-table-right {background: url(images/main-content/content-center-right.gif) repeat-y;}
+
+.main_content-border-table-bottom {background: url(images/main-content/content-bottom-center.gif) repeat-x;}
+.main_content-border-table-bottom-left {background: url(images/main-content/content-bottom-left.gif) no-repeat;width: 39px;height: 52px;}
+.main_content-border-table-bottom-right {background: url(images/main-content/content-bottom-right.gif) no-repeat;width: 44px;height: 52px;}
+
+#gadgettable {
+  width:100%;height:100%;
+}
+
+.gadget.edit_mode {padding:5px;}
+.gadget.edit_mode {border:1px outset white;}
+.gadget.edit_mode .gadget_title {
+  display:block;
+  font-weight: bold;
+  font-size:75%;
+  background-color: #000000;
+  color: #CCCCCC;
+  padding: 2px 2px 2px 10px;
+  border-bottom:1px solid #CCCCCC;
+}
+.gadget.edit_mode .gadget_body {
+  margin: 2px;
+}
+
+
+/* ----------------------------------------------------------------------------
+ * Languages
+ */
+
+.languages .gadget_body {
+    text-align: left;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+
+.font_Block_Headline {
+    font-size: 16px;
+    color: #FFC800;
+    font-weight: bold;
+}
+
+
+.gadget.chat > .gadget_inner > .gadget_scroll > .gadget_body > .block > .block_body > .block_inner,
+.gadget.chat > .gadget_inner > .gadget_body > .block > .block_body > .block_inner
+{
+    padding: 0;
+    position: absolute;
+    top: 0px;
+    left: 10px;
+    right: 5px;
+    bottom: 0px;
+
+}
+
+.gadget.chat > .gadget_inner > .gadget_scroll > .gadget_body > .block > .block_body > .background,
+.gadget.chat > .gadget_inner > .gadget_body > .block > .block_body > .background {
+    background: transparent;
+}
+
+.gadget.chat > .gadget_inner > .gadget_scroll > .gadget_body > .block > .block_body > .border-top,
+.gadget.chat > .gadget_inner > .gadget_body > .block > .block_body > .background {
+    background: transparent;
+}
+
+.gadget.chat > .gadget_inner > .gadget_scroll > .gadget_body > .block > .block_body > .border-bottom,
+.gadget.chat > .gadget_inner > .gadget_body > .block > .block_body > .background {
+    background: transparent;
+}
+
+
+/*********************************************************
+ * Menu
+ *********************************************************/
+
+.gadget.menu,
+.languages {
+    padding-left: 16px;
+}
+
+.gadgets.menu {
+    padding-bottom: 80px;
+}
+
+.menu-1 {
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+.menu-1-body,
+.menu-2-body {
+  padding: 5px;
+  padding-left:0px;
+  position: relative;zoom: 1;
+}
+
+.menu-0-body .menu-between {
+  width:10px;height:5px;
+}
+
+.menu-1-separator {
+  position:relative;zoom: 1;z-index:80;top:0px;left:17px;width:99px;height:12px;
+  margin-left:5px;
+  margin-top:5px;
+  margin-bottom:12px;
+  background: url(images/menu/seperator.gif) 0 0 no-repeat;top:0px;left:0px;right:0px;bottom:0px;
+}
+
+.menu-2-separator {
+  margin-bottom:9px;
+}
+
+.menu-1-caption,
+.menu-2-caption,
+.menu-3-caption {
+  position: relative;zoom: 1;
+  padding-right:5px;
+  cursor: pointer;
+  color: black;
+}
+
+
+
+.menu-2-caption {
+    padding-bottom:4px;
+}
+
+.menu-1-caption img,
+.menu-2-caption img,
+.menu-3-caption img {
+    border:none;
+}
+
+.menu-2-caption,
+.menu-3-caption {color: #FFD700;}
+
+.menu-2-caption:hover,
+.menu-3-caption:hover {color: #CCFFCC;}
+
+.menu-2-caption.selected,
+.menu-3-caption.selected {color: #CC6633;}
+
+.menu-2-caption {
+     font-size:               14px;
+     font-weight:             normal;
+     padding-left:            0px;
+}
+
+.menu-3-caption {
+     font-size:               12px;
+     font-weight:             normal;
+     padding-left:            0px;
+}
+
+.menu-vertical a,
+.menu-vertical a:link,
+.menu-vertical a:visited,
+.menu-vertical a:focus,
+.menu-vertical a:hover,
+.menu-vertical a:active,
+.menu-vertical img {
+    outline: none;
+    display: block;
+    text-decoration: none;
+    border: 0 none;
+    color: #DC9716;
+}
+
+a.selected,
+a.selected:link,
+a.selected:visited,
+a.selected:focus,
+a.selected:hover,
+a.selected:active {
+     color:                   #FFFFFF;
+     text-decoration:         underline overline;
+}
+
+a.menu-2-caption,
+a.menu-3-caption {
+     color:                   #FFCF00;
+     text-decoration:         none;
+     padding-left:	      10px;
+}
+
+a.menu-2-caption:hover,
+a.menu-3-caption:hover  {
+     color:                   #FFFFFF;
+     text-decoration:         none;
+}
+
+.menu-1   .menu-1-body {display: none;}
+.menu-1.open   .menu-1-body {display: block;}
+
+.menu-1-caption .font_menu-1          {display: block;}
+.menu-1-caption .font_menu-1-hovered  {display: none;}
+.menu-1-caption .font_menu-1-selected {display: none;}
+
+.menu-1-caption:hover .font_menu-1          {display: none;}
+.menu-1-caption:hover .font_menu-1-hovered  {display: block;}
+.menu-1-caption:hover .font_menu-1-selected {display: none;}
+
+.menu-1-caption.selected .font_menu-1          {display: none;}
+.menu-1-caption.selected .font_menu-1-hovered  {display: none;}
+.menu-1-caption.selected .font_menu-1-selected {display: block;}
+
+
+.menu-2 .menu-2-body {display: none;}
+.menu-2.open .menu-2-body {display: block;}
+
+.menu-3   .menu-3-body {display: none;}
+.menu-3.open   .menu-3-body {display: block;}
+
+.gadget_fixed {
+  margin-left: 10px;
+  margin-top: 10px;
+  overflow: auto;
+}
+
+.gadget_fixed_container {
+    padding: 5px;
+    background: url(images/background.jpg) 0 0 repeat fixed;
+    z-index: -1;
+}
+
+/*********************************************************
+ * Hinweise
+ *********************************************************/
+
+/*.hints
+  .hints.on
+  .hints.off */
+
+.hints.showlink {
+    font-size: 0.85em; font-weight: normal;
+}
+
+.hints.hidelink {
+    font-size: 0.85em;
+    font-weight: normal;
+    margin: 0px 0px 10px 0px;
+}
+
+.hints.off {
+    font-size: 0.85em;
+}
+
+/*********************************************************
+ * Statuszeile
+ *********************************************************/
+
+.buttonbar img {padding-left:8px;}
+
+.horizontal-separator {height:50px;}
+
+.horizontal-separator-image {position:relative;zoom: 1; height:33px;}
+.horizontal-separator-image {background: url(images/page/frame-big-border-top.gif) 0 100% repeat-x;}
+
+.gadget.horizontal_seperator {z-index:-1;}
+
+.space-left {
+  width:143px;
+  height:175px;
+  background: url(images/left_top.jpg);
+  background-repeat: no-repeat;
+}
+
+.space-right {
+  background-image: url(images/right_top.jpg);
+  background-repeat: no-repeat;
+  width:187px;
+  height:20px;
+}
+
+/*********************************************************
+ * Tabellen
+ *********************************************************/
+
+.table .body .inner .error {
+  color: #990033;
+  font-weight: bold;
+  font-size: 11pt;
+  padding:  10px 0px 10px 0px;
+}
+
+.table .body .inner .success {
+  color: #FFFFFF;
+  font-weight: bold;
+  font-size: 11pt;
+  padding:  10px 0px 10px 0px;
+}
+
+.table   .body   .inner   .top {
+  margin: 10px 0px 10px;
+}
+
+.table   .body   .inner   .bottom {
+  margin: 0;
+}
+
+.table.head   .title-image {position:relative;zoom: 1;z-index:20;}
+
+.table   .body   .inner   .inner_table {
+  margin-top:0;
+  padding: 3px;
+}
+
+.table.caption {
+  width: 100%;
+  float: left;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+.font_Table_Caption {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.table .body {
+  clear: left;
+}
+
+.caption_right {
+  text-align:right;
+  padding: 10px 30px 25px 0;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+.row_0 {
+  color:#000000;
+  background-color:#ccbea4;
+}
+
+.row_1 {
+  color:#000000;
+}
+
+.links_with_additional_options {
+    font-size: 0.8em;
+}
+
+
+
+.gadget.clock  > .gadget_inner > .gadget_body {
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+/**********************************************************************
+ * Ticker / Ausrufer
+ **********************************************************************/
+.ticker_label {
+    font-style: italic;
+}
+
+.ticker_msg {
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+.ticker_msg.new {
+    font-weight: bold;
+}
+
+.ticker {
+    background-color: #2a2014;
+    color: #c1976a;
+    border-color: #9e7c54;
+    border-style: solid;
+    border-width: 1px;
+    margin-top: 15px;
+}
+
+/**********************************************************************
+ * Hero-Anzeige
+ **********************************************************************/
+
+.font_Hero_Name {
+  font-weight: bold;
+  font-size: 120%;
+}
+.font_Hero_Title{
+  font-weight: bold;
+}
+.font_Hero_Class{
+  font-weight: bold;
+}
+.font_Hero_Race{
+  font-weight: bold;
+}
+.font_Hero_Level{
+  font-weight: bold;
+}
+
+
+
+
+.hero_avatar > .background {
+    background: url(images/stone.gif) no-repeat 0px 0px;
+    height: 163px;
+    width: 166px;
+    position: absolute;
+    right: 10px;
+    top: -5px;
+    z-index: 1;
+}
+
+
+.hero_full                                {position:relative;zoom: 1;}
+
+.hero_full .image                         {position:relative;min-height:10px;text-align:center;}
+
+.hero_avatar .changeHeroLink {
+    z-index: 2;
+    position: relative;
+    min-height: 10px;
+}
+
+.hero_avatar { margin-bottom: -10px}
+hero_avatar image
+.hero_avatar { margin-left: 10px; height: 160px; }
+
+.hero_full > .hero_body                   {clear:both;position:relative;top:0px;height:170px;z-index:2;}
+
+.hero_full > .hero_body > .background     {
+background: url(images/stone.gif) no-repeat 0px 0px;position:absolute;top:0px;left:12px;right:0px;bottom:0px;}
+
+.hero_full .nextHeroLinkImageDown             {position:absolute;left:11px;bottom:142px;z-index:50;overflow:hidden;z-index:5;}
+.hero_full .prevHeroLinkImageUp               {position:absolute;left:11px;bottom:157px;z-index:50;overflow:hidden;z-index:5;}
+
+.hero_full .nextHeroLinkImageRight             {position:absolute;left:11px;bottom:112px;z-index:50;overflow:hidden;z-index:5;}
+.hero_full .prevHeroLinkImageLeft              {position:absolute;left:11px;bottom:127px;z-index:50;overflow:hidden;z-index:5;}
+
+.hero_full .name                          {position:absolute;left:20px;bottom:140px;overflow:hidden;z-index:2;}
+
+
+.heroTitle    {position:absolute;left:30px;bottom:125px;overflow:hidden;z-index:2;}
+.heroRace     {position:absolute;left:30px;bottom:110px;overflow:hidden;z-index:2;}
+.heroClass    {position:absolute;left:30px;bottom:95px;overflow:hidden;z-index:2;}
+.heroLevel    {position:absolute;right:20px;bottom:95px;overflow:hidden;z-index:2;}
+
+/* replaces heroClass+heroRace for Tutorial heros */
+.hero_full div.heroTutorial {position:absolute;left:30px;bottom:95px;overflow:hidden;z-index:2;}
+.heroTutorial { font-weight: bold; }
+
+
+
+.hero_full .description                   {position:absolute;left:10px;bottom:90px;overflow:hidden;z-index:2;}
+
+.hero_full .diamonds,
+.hero_full .gold,
+.hero_full .ep,
+.hero_full .fame                          {position:absolute;z-index:3;overflow:hidden;height:20px;}
+
+.hero_full .ep                            {left:10px;  bottom:70px; right:5px;}
+.hero_full .fame                          {left:10px;  bottom:48px; right:5px;}
+.hero_full .gold                          {left:12px; bottom:28px; right:5px;}
+.hero_full .diamonds                      {left:12px; bottom:13px; right:5px;}
+
+.hero_full .ep   .image {position:absolute; width: 42px; height: 24px; left:10px; top:0px; background: url(images/icons/lang/de/ep.png) no-repeat;}
+.hero_full .fame .image {position:absolute; width: 42px; height: 24px; left:10px; top:0px; background: url(images/icons/lang/de/fame.png) no-repeat;}
+/* .hero_full .gold .image {position:absolute; left:20px;top:0px; background: url(images/icons/gold.png) no-repeat;} */
+/* .hero_full .diamonds .image {position:absolute; left:20px;top:0px; background: url(images/icons/gold.png) no-repeat;} */
+
+.hero_full .bar {position:absolute;left:55px;top:1px;width:89px;height:20px;background: url(images/icons/hero_bar.png) no-repeat;}
+.hero_full .bar-inner {position:absolute;left:5px;top:4px;right:5px;bottom:4px;}
+
+.hero_full .bar1,
+.hero_full .bar2,
+.hero_full .bar_text {position:absolute;left:0px;top:0px;bottom:0px;}
+
+.hero_full .bar_text { z-index:3; top: -1px; width: 100%; display:block; font-size: 11px; color: white; vertical-align: middle; padding-left: 2px; }
+.hero_full .bar1 {z-index:2;}
+.hero_full .bar2 {z-index:1;}
+
+.hero_full .ep .bar1 {background: url(images/icons/hero_bar_ep_1.png) repeat-x;}
+.hero_full .ep .bar2 {background: url(images/icons/hero_bar_ep_2.png) repeat-x;}
+
+.hero_full .fame .bar1 {background: url(images/icons/hero_bar_fame_1.png) repeat-x;}
+.hero_full .fame .bar2 {background: url(images/icons/hero_bar_fame_2.png) repeat-x;}
+
+.hero_full .upSign {position:absolute;left:145px;top:2px;width:12px;height:20px;}
+
+.hero_full .fame .text,
+.hero_full .ep .text,
+.hero_full .gold .text,
+.hero_full .diamonds .text              {position:absolute;top:0px;left:50px;color:#FFFFFF;font-size:12px;font-style:italic;
+                                      text-align:left;text-wrap:none;}
+
+.nextHeroLinkImageDown {width:15px;height:11px;background: url(images/icons/next_hero_adown.gif) no-repeat; cursor: pointer;}
+.nextHeroLinkImageRight {width:15px;height:11px;background: url(images/icons/next_hero_adown.gif) no-repeat; cursor: pointer;}
+.prevHeroLinkImageUp {width:15px;height:11px;background: url(images/icons/prev_hero_aup.gif) no-repeat; cursor: pointer;}
+.prevHeroLinkImageLeft {width:15px;height:11px;background: url(images/icons/prev_hero_aup.gif) no-repeat; cursor: pointer;}
+
+.nextHeroLink img,
+.hero_short .changeHeroLink,
+.hero_full a,
+.hero_full a:link,
+.hero_full a:visited,
+.hero_full a:focus,
+.hero_full a:hover,
+.hero_full a:active,
+.hero_full a img {
+    outline: none;
+    text-decoration: none;
+    border: 0 none;
+    cursor: pointer;
+}
+
+.hero_full .upSign.no{
+  background: url(images/icons/hero_bar_no.png) no-repeat;
+}
+.hero_full .upSign.yes {
+  background: url(images/icons/hero_bar_yes.png) no-repeat;
+}
+
+.heroTutorial { font-weight: bold; }
+
+.group_cash_box .gold {position:absolute;z-index:3;overflow:hidden;height:20px;top:35px;left:20px; right: 10px; background: url(images/icons/gold.png) no-repeat;}.group_cash_box .text { position:absolute;top:0px;left:30px;color:#FFFFFF;font-size:14px;font-style:italic; text-align:left;text-wrap:none;}
+.group_cash_box .paysource { padding-top: 35px; }
+.group_cash_box .buytarget { padding-top: 5px; }
+
+
+/**********************************************************************
+ * Defaults for all Pages
+ **********************************************************************/
+
+a                   {
+     color:                    #FFFFFF;
+     text-decoration:          none;
+}
+a:link              {
+     color:                    #DC9716;
+     text-decoration:          none;
+}
+.alink              {
+     color:                    #DC9716;
+     text-decoration:          none;
+}
+
+a:visited           {
+     color:                    #DC9716;
+     text-decoration:           none;
+}
+a:active            {
+     color:                    #FFFFFF;
+     text-decoration:          none;
+}
+a:hover             {
+     color:                    #FFFFFF;
+     text-decoration:          none;
+}
+
+
+h1                  {
+     font-size:                20px;
+     color:                    #EAEAEA;
+}
+h2                  {
+     font-size:                17px;
+     color:                    #EAEAEA;
+}
+h3                  {
+     font-size:                14px;
+     color:                    #EAEAEA;
+}
+h4                  {
+     font-size:                14px;
+     color:                    #EAEAEA;
+}
+
+
+ul                  {
+     list-style-type:          circle;
+     color:                    #FFFFFF;
+}
+ol                  {
+     color:                    #FFFFFF;
+}
+
+.tooltip            {
+     background-color:         #594935;
+     color:                    #FFFFDD;
+     font-size:                12px;
+     font-family:              Arial, Helvetica, sans-serif;
+     padding:                  2px;
+     border-width:             2px;
+     border-style:             ridge;
+     border-color:             #FFFFE1;
+}
+
+.tooltip > * {
+    color: #FFFFDD;
+}
+
+table.tooltip       {
+     background-color:         #aa9663;
+     color:                    #FFFFDD;
+     font-size:                12px;
+     font-family:              Arial, Helvetica, sans-serif;
+     padding:                  2px;
+}
+
+.bonus_positive,
+.tooltip .bonus_positive
+{
+    color: #00FF00;
+}
+.bonus_negative,
+.tooltip .bonus_negative
+{
+    color: #FF0000;
+}
+.bonus_neutral,
+.tooltip .bonus_neutral
+{
+}
+
+.tooltip > a,
+.tooltip > a:link,
+.tooltip > a:visited,
+.tooltip > a:focus,
+.tooltip > a:active,
+.tooltip > * > a,
+.tooltip > * > a:link,
+.tooltip > * > a:visited,
+.tooltip > * > a:focus,
+.tooltip > * > a:active,
+.tooltip > *> * > a,
+.tooltip > *> * > a:link,
+.tooltip > *> * > a:visited,
+.tooltip > *> * > a:focus,
+.tooltip > *> * > a:active {
+    color:                    #AA0000;
+}
+.tooltip > a:hover,
+.tooltip > * > a:hover,
+.tooltip > * > * > a:hover {
+    color:                    #330000;
+}
+
+.tooltip_title      {
+     font-size:                14px;
+     font-weight:              bold;
+     color:                    #FFFFFF;
+     background-color:         #090909;
+}
+.tooltip_shadow {
+     background-color:         #090909;
+}
+
+.tooltip_footenote_font {
+    font-style: italic;
+    font-size: 0.9em;
+}
+
+a.button_minor:visited,
+a.button_minor:active,
+a.button_minor:link,
+a.button_minor:hover,
+.button_minor {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    background-color: transparent;
+    border: none;
+    color: #FFCF00;
+}
+
+a.button_minor:hover,
+.button_minor:hover {
+    color: white;
+}
+
+.button_image_info {
+    background: url(images/icons/info.gif) no-repeat center center;
+    height: 22px;
+    width: 22px;
+    border-style:none;
+}
+
+.footnote {
+    font-size: 80%;
+}
+
+/**********************************************************************
+ * CSS Settings for the scrollbars (IE-only, breaks validity!)
+ **********************************************************************/
+
+*         {
+     scrollbar-3d-light-color:     #000000;
+     scrollbar-arrow-color:        #666666;
+     scrollbar-base-color:         #000000;
+     scrollbar-dark-shadow-color:  #291E1E;
+     scrollbar-face-color:         #291E1E;
+     scrollbar-highlight-color:    #444444;
+     scrollbar-shadow-color:       #000000;
+     scrollbar-track-color:        #343434;
+}
+
+
+input, select       {
+     font-family:             Arial, Helvetia, sans-serif;
+     font-size:               10pt;
+     background-color:        #664C2B;
+     border-color:            #816E36;
+     border-style:            ridge;
+     color:                   #FFFFFF;
+     font-weight:             normal;
+}
+option {
+     background-color: #664C2B;
+}
+radio, checkbox     {
+     font-family:             Arial, Helvetia, sans-serif;
+     font-size:               10pt;
+     background-color:        #505050;
+     border-color:            #FFCF00;
+     border-style:            ridge;
+     color:                   #FFFFFF;
+     font-weight:             normal;
+}
+textarea            {
+     font-family:             Arial, Helvetia, sans-serif;
+     font-size:               10pt;
+     background-color:        #664C2B;
+     border-color:            #816E36;
+     border-style:            ridge;
+     color:                   #FFFFFF;
+     font-weight:             normal;
+     cursor:                  auto;
+}
+
+.fileinput {
+    color: black;
+}
+
+.hidden {
+     display: none;
+}
+
+a.clickanchor,
+a.clickanchor:visited,
+a.clickanchor:active,
+a.clickanchor:link,
+a.clickanchor:hover,
+a.clickanchor_disabled,
+a.clickanchor_disabled:visited,
+a.clickanchor_disabled:active,
+a.clickanchor_disabled:link,
+a.clickanchor_disabled:hover,
+a.clickanchor,
+a.button:visited,
+a.button:active,
+a.button:link,
+a.button:hover,
+a.button_disabled,
+a.button_disabled:visited,
+a.button_disabled:active,
+a.button_disabled:link,
+a.button_disabled:hover {
+  padding: 0.1em 0.8em;
+}
+
+a.clickanchor:visited,
+a.clickanchor:active,
+a.clickanchor:link,
+a.clickanchor:hover,
+.clickanchor,
+a.button:visited,
+a.button:active,
+a.button:link,
+a.button:hover,
+.button             {
+     font-family:             Verdana, Helvetica, sans-serif;
+     font-size:               8pt;
+     background-image:        url(images/button.jpg);
+     border-style:            ridge;
+     border-color:            #816E36;
+     color:                   #FFFFFF;
+     font-weight:             bold;
+     background-color:        #462d28;
+}
+
+a.clickanchor_disabled:visited,
+a.clickanchor_disabled:active,
+a.clickanchor_disabled:link,
+a.clickanchor_disabled:hover,
+.clickanchor_disabled,
+a.button_disabled:visited,
+a.button_disabled:active,
+a.button_disabled:link,
+a.button_disabled:hover,
+.button_disabled    {
+     font-family:             Verdana, Helvetica, sans-serif;
+     font-size:               8pt;
+     background-image:        url(images/button_disabled.jpg);
+     border-style:            ridge;
+     border-color:            #816E36;
+     color:                   #FFFFFF;
+     font-weight:             bold;
+     background-color:        #AAAAAA;
+}
+
+.button_image       {
+     border-style:            none;               /* for <input type="image"> */
+}
+
+img.button_image_selector {
+     border: 2px solid #816E36;
+}
+img.button_image_selector:hover {
+     border: 2px solid white;
+}
+
+
+ .editor_img {
+    margin: 10px;
+ }
+
+ .editor_img:hover {
+    border: 2px solid white;
+    margin: 8px;
+ }
+
+.cq_map_fav_element_selected,
+.editor_img_selected {
+    border: ridge #F0A015 5px;
+ }
+
+.editor_img_selected {
+    margin: 5px;
+}
+
+
+form                {
+     margin:                  0px;
+}
+
+pre                 {
+     font-size:               11px;
+     margin:                  0px;
+}
+
+
+/* Buttons and text right of page number links on top and below tables */
+.pagi_def {
+    font-size: 0.75em;
+    color: #DDDDDD;
+}
+input.pagi_def {
+    background-color:        #4C3F2D;
+    border-width: 1px;
+    border-color: #999999;
+}
+.pagi_but {
+    font-size: 0.75em;
+    background-color:        #4C3F2D;
+    color: #DDDDDD;
+    border-width: 1px;
+    border-color: #999999;
+}
+
+iframe.content_block,
+div.content_block,
+p.content_block,
+table.content_table {
+    border: 1px solid #4C3F2D;
+    padding: 0.5em;
+}
+
+
+table.content_table > * > tr > th,
+table.content_table > * > tr > td {
+    padding: 1mm;
+    color: #FFFFDD;
+}
+
+/* Background for tables with alternating colors, e.g. mailbox, reports et al */
+table.content_table > * > tr.header {
+     background-color:        #4C3F2D;
+}
+
+.content_block,
+table.content_table > * > tr.row0 {
+}
+
+table.content_table > * > tr.row1 {
+     background-color:        #594935;
+}
+
+.content_table_mainline {
+    font-weight: bold;
+}
+
+.content_table_subline,
+.content_table_subline > * {
+    font-size: 11px;
+}
+
+
+.message_success     {
+     color:                   #FFCF00;
+     font-weight:             bold;
+     font-size:               11pt;
+}
+.message_error      {
+     color:                   #FF5555;
+     font-size:               11pt;
+}
+
+div.message_info,  p.message_info,
+div.message_error, p.message_error      {
+    background-color: #3B3223;
+    padding: 3px;
+    border: 3px ridge #666666;
+}
+
+
+.tutorial
+.tutorial_hint {
+     font-weight:             bold;
+     text-decoration:         underline;
+}
+
+.tutorial_close {
+    width: 100%;
+    font-size: 0.8em;
+    text-align: right;
+    top-margin: 2em;
+    bottom-margin: 0px;
+    font-style: normal;
+}
+
+.tutorial {
+    padding-top: 0.0em;
+    padding-bottom: 0em;
+    padding-left: 0.3em;
+    padding-right: 0.3em;
+  color: #FFFFFF;
+  background-color: #3B3223;
+  font-style: italic;
+  margin-top: 0.3em;
+  margin-bottom: 0.3em;
+}
+
+img.tutorial {
+  margin-left: 0.3em;
+  margin-top: 0.0em;
+  margin-right: 0.0em;
+  margin-bottom: 0.0em;
+}
+
+div.tutorial {
+    padding: 0.3em;
+  border-width: 3;
+  border-color: #45433e;
+  border-style: ridge;
+  max-width: 35em;
+  min-height: 125px;
+}
+
+
+
+
+
+
+
+.bold               {
+     color:                   #FFFFFF;
+     font-weight:             bold;
+}
+.hilite             {
+     color:                   #FFFFFF;
+     font-weight:             bold;
+}
+a.gray,.gray    {
+     color:                   #B0B0B0;
+}
+
+
+/* display time of last activity of figure */
+.hero_activity_ok            {
+     color:                   #97FF35;
+     font-weight:             bold;
+}
+.hero_activity_warn          {
+     color:                   #FF7F35;
+     font-weight:             bold;
+}
+.hero_activity_crit          {
+     color:                    #FF0000;
+     font-weight:              bold;
+}
+
+.hero_active,A.hero_active,A:visited.hero_active,A:active.hero_active {
+}
+
+.hero_inactive,A.hero_inactive,A:visited.hero_inactive,A:active.hero_inactive
+{
+    color: #FF5555;
+}
+
+
+/* colors for objectives */
+/* demofile: http://inf.world-of-dungeons.de/wod/spiel/help/goal_css_test.php*/
+
+.medal {
+    cursor: pointer;
+}
+
+.medal > .headline {
+    margin-top: 0.3em;
+}
+
+.medal > .headline > .text {
+    font-weight: bold;
+    font-size: 110%;
+}
+
+ol.tutorial_goallist > li.completed,
+.medal > .details.earned {
+    background-color: #404b00;
+    border: 5px ridge #404b00;
+}
+
+ol.tutorial_goallist > li.uncompleted,
+.medal > .details.not_earned {
+    background-color: #563e28;
+    border: 5px ridge #563e28;
+}
+
+.medal > .details {
+    position: relative;
+    width: 100%;
+    padding: 0px;
+    color: white;
+    text-align: center;
+}
+
+.medal > .details > .label {
+    padding-top: 5px 48px 3px 48px;
+    font-size: 135%;
+    font-weight: bold;
+}
+
+.medal > .details > .icon_new {
+    position: absolute;
+    left: 3px;
+    top: 0px;
+}
+
+.medal > .details > .icon_medal {
+    position: absolute;
+    right: 3px;
+    top: 0px;
+}
+
+.medal > .details > .description {
+    padding-left: 48px;
+    padding-right: 48px;
+}
+
+.medal > .details > .date {
+    font-weight: bold;
+    padding: 3px;
+}
+
+.medal > .details > .expire {
+    font-size: 90%;
+    padding: 3px;
+}
+
+
+.medal > .details.earned > .hidable > .reward,
+.medal > .details.earned > .hidable > .reward_hint {
+    background-color: #687135;
+}
+
+.medal > .details.not_earned > .hidable > .reward,
+.medal > .details.not_earned > .hidable > .reward_hint {
+    background-color: #7d5a3b;
+ }
+
+.medal > .details > .hidable > .reward {
+    margin-top: 4px;
+    padding-top: 2px;
+}
+
+.reward_hint {
+    font-style: italic;
+    font-size: 80%;
+}
+
+.medal > .details > .hidable> .submedals {
+    padding: 0;
+    margin: 0;
+}
+
+.medal > .details > .hidable > .submedals > table > * > tr > td > ul {
+    margin: 0;
+    list-style-type: none;
+}
+
+.medal > .details > .hidable > .submedals > table > * > tr > td > ul > li.earned {
+    font-weight: bold;
+}
+
+.medal > .details > .hidable > .submedals > table > * > tr > td > ul > li.not_earned {
+    font-style: italic;
+}
+
+
+
+
+.obj_golden_icon {
+    display: none;
+}
+.obj_golden {
+    color: #FFcc00;
+}
+
+
+.obj_silver_icon {
+    display: block;
+}
+.obj_silver {
+    color: #DDDDDD;
+}
+
+.obj_bronze_icon {
+    display: block;
+}
+.obj_bronze {
+    color: #CC9922;
+}
+
+
+.obj_green_icon {
+    display: none;
+}
+.obj_green {
+    color: #00FF33;
+}
+.obj_blue_icon {
+    display: none;
+}
+.obj_blue{
+    color: #00FFFF;
+}
+
+
+.generic_yes,A.generic_yes,A:visited.generic_yes,A:active.generic_yes
+{
+    color: #00FF00;
+}
+
+.generic_no,A.generic_no,A:visited.generic_no,A:active.generic_no
+{
+    color: #FF5555;
+}
+
+.generic_maybe,A.generic_maybe,A:visited.generic_maybe,A:active.generic_maybe
+{
+    color: #FF9603;
+}
+
+
+.item_default,A.item_default,A:visited.item_default,A:active.item_default {
+  color: #FFFFFF;
+}
+.item_generated,A.item_generated,A:visited.item_generated,A:active.item_generated {
+  color: #AAAAAA;
+}
+.item_unique_hero,A.item_unique_hero,A:visited.item_unique_hero,A:active.item_unique_hero {
+  color: #7199FF;
+}
+.item_unique_group,A.item_unique_group,A:visited.item_unique_group,A:active.item_unique_group {
+  color: #FFD700;
+}
+.item_set,A.item_set,A:visited.item_set,A:active.item_set {
+  color: #32CD32;
+}
+.item_extra,A.item_extra,A:visited.item_extra,A:active.item_extra {
+  color: #B8860B;
+}
+
+/* indicate if a figure may wear an item */
+.item_usable,A.item_usable,A:visited.item_usable,A:active.item_usable {
+     color:                   #FFFFFF;            /*#55FF55*/
+}
+.item_later_usable,A.item_later_usable,A:visited.item_later_usable,A:active.item_later_usable {
+     color:                   #AA7603;
+}
+.item_unusable,A.item_unusable,A:visited.item_unusable,A:active.item_unusable {
+     color:                   #EE4444;
+}
+a:hover.item_usable,a:hover.item_later_usable,a:hover.item_unusable {
+     color:                   #FFFFFF;
+}
+
+/*
+  Indicate value of item
+*/
+/*
+.item_value_0,A.item_value_0,A:visited.item_value_0,A:active.item_value_0 {
+    color: #c0c0c0;
+}
+.item_value_1,A.item_value_1,A:visited.item_value_1,A:active.item_value_1 {
+    color: #ffffff;
+}
+.item_value_2,A.item_value_2,A:visited.item_value_2,A:active.item_value_2 {
+    color: #00ff00;
+}
+.item_value_3,A.item_value_3,A:visited.item_value_3,A:active.item_value_3 {
+    color: #0000ff;
+}
+.item_value_4,A.item_value_4,A:visited.item_value_4,A:active.item_value_4 {
+    color: #9933ff;
+}
+.item_value_5,A.item_value_5,A:visited.item_value_5,A:active.item_value_5 {
+    color: #ff8000;
+}
+*/
+
+a.item_unique,
+a:visited.item_unique,
+a:active.item_unique
+{    /* unique Item*/
+     font-style: italic;
+}
+
+.rep_uni,
+a.rep_uni,
+a:visited.rep_uni,
+a:active.rep_uni,
+a:link.rep_uni
+{    /* unique item in combat report */
+     color:                   #97FF35;
+}
+
+.item_groupitem
+{    /* group Item*/
+}
+
+a.item_destroyed
+,a:visited.item_destroyed
+,a:active.item_destroyed
+ {    /* destroyed Item */
+     text-decoration: line-through;
+}
+
+/* Anzeige Gegenstand-Details */
+.gem_bonus_only_by_gem {
+     color:                   #FFC519;            /* Bonus ausschlie?lich durch Edelstein */
+}
+.gem_bonus_also_by_gem {
+     color:                   #FF9603;            /* Bonus durch Edelstein erh?ht */
+}
+.gem_bonus,A.gem_bonus,A:visited.gem_bonus,A:active.gem_bonus {
+     color:                   #55FF55; /* Guter Bonus */
+}
+.gem_malus,A.gem_malus,A:visited.gem_malus,A:active.gem_malus {
+     color:                   #FF2000; /* Schlechter Bonus (Malus) */
+}
+/* sorted tables - head line */
+.table_hl           {
+     font-family:             Verdana, Helvetica, sans-serif;
+     font-size:               11pt;
+     background-color:        #4C3F2D;
+     color:                   #FFCC00;
+     border:                  none;
+}
+.table_hl_sorted    {
+     font-family:             Verdana, Helvetica, sans-serif;
+     font-size:               11pt;
+     background-color:        #4C3F2D;
+     color:                   #FFFFFF;
+     border:                  none;
+}
+
+table.content_table > * > tr > th.small,
+table.content_table > * > tr > th.small > input {
+    font-weight: normal !important;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+    font-size: 95% !important;
+}
+
+
+/**********************************************************************
+ * paginator (when displaying multiple pages of data)
+ **********************************************************************/
+.paginator          {
+     font-family:             Verdana, Helvetica, sans-serif;
+     font-size:               11pt;
+     color:                   #FFCC00;
+     background-color:        #4C3F2D;
+     border:                  none;
+}
+.paginator_selected {
+     font-family:             Verdana, Helvetica, sans-serif;
+     font-size:               11pt;
+     color:                   #FFFFFF;
+     background-color:        #201912;
+     border:                  none;
+}
+
+
+/**********************************************************************
+ * Attributes and skills
+ **********************************************************************/
+.effective_value
+      {                             /* effective value/rank of an attribute/skill */
+     color:                   #FFCF00;
+}
+.bonus
+              {                             /* Bonus for skills and item classes */
+     color:                   #BBBBBB;
+     font-size:               0.8em;
+}
+
+/* display skills (hero => skill) */
+table.content_table > * > tr > * > a.skill_primary,
+.skill_primary
+{
+    color:                   #FFCF00 !important;
+}
+
+table.content_table > * > tr > * > a.skill_secondary,
+.skill_secondary
+{
+     color:                   #CED3E6 !important;
+}
+
+table.content_table > * > tr > * > a.skill_foreign,
+.skill_foreign
+{
+     color:                   #A4A4A4 !important;
+}
+
+
+
+/**********************************************************************
+ * Combat reports
+ **********************************************************************/
+.rep_room_end
+      {
+     color:                   #FFCF00;
+     font-size:               11pt;
+}
+.rep_status_headline
+ {
+     color:                   #FFCF00;
+     font-size:               13pt;
+}
+.rep_status_table
+ {
+     color:                   #FFFFFF;
+     font-size:               10pt;
+     border-style:            none;
+}
+
+.rep_round_headline
+  {
+     color:                   #FFCF00;
+     font-weight:             bold;
+     font-size:               12pt;
+}
+.rep_emphasized
+            {
+     color:                   #FFCF00;
+     font-weight:             bold;
+}
+.rep_initiative
+            {                             /* Initiative */
+     color:                   #FFFFFF;
+     font-weight:             bold;
+     white-space:             nowrap;
+}
+.rep_action
+            {                             /* Aktion */
+     color:                   #FFFFFF;
+     font-size:               10px;
+}
+
+.rep_level_description
+ {
+     color:                   #A0C0E0;            /* "lightblue? */
+}
+.rep_level_monster_exitus
+ {
+     color:                   #97FF35;
+}
+.rep_level_success
+    {
+     color:                   #22CC22;            /* lime? */
+}
+.rep_level_failure
+    {
+     color:                   #FF5555;            /* red? */
+}
+
+.rep_gain  /*hero gains hp or mp*/
+{
+    color: #00FF00;
+}
+
+.rep_loss /*hero looses hp or mp*/
+{
+    color: #FF0000;
+}
+
+
+span.rep_monster
+,a.rep_monster
+,a:visited.rep_monster
+,a:active.rep_monster
+ {    /* Monster */
+     color:                   #DD8603;
+}
+span.rep_hero
+,a.rep_hero
+,a:visited.rep_hero
+,a:active.rep_hero
+ {    /* Helden */
+     color:                   #22CC22;
+}
+span.rep_myhero
+,a.rep_myhero
+,a:visited.rep_myhero
+,a:active.rep_myhero
+ {    /* eigener Held */
+     color:                   #97FF35;
+}
+span.rep_myotherheros
+,a.rep_myotherheros
+,a:visited.rep_myotherheros
+,a:active.rep_myotherheros
+ {    /* andere Helden des Spielers */
+     color:                   #7DD27D;
+}
+
+span.rep_myhero_defender
+,a.rep_myhero_defender
+,a:visited.rep_myhero_defender
+,a:active.rep_myhero_defender
+ {    /* eigener Held als Verteidiger */
+     color:                   #FFCC55;
+}
+span.rep_myotherheros_defender
+,a.rep_myotherheros_defender
+,a:visited.rep_myotherheros_defender
+,a:active.rep_myotherheros_defender
+ {    /* eigener Held als Verteidiger */
+     color:                   #DBAA33;
+}
+
+span.rep_enemy
+,a.rep_enemy
+,a:visited.rep_enemy
+,a:active.rep_enemy
+ {    /* eigener Held - Verteidiger */
+     color:                   #FFB300;
+}
+
+.rep_wounds_none
+             {                             /* nicht  verwundet */
+     color:                   #22CC22;
+}
+.rep_wounds_lightly
+             {                             /* leicht verwundet */
+     color:                   #F2D600;
+}
+.rep_wounds_medium
+             {                             /* mittel verwundet */
+     color:                   #FF7B00;
+}
+.rep_wounded_heavy
+             {                             /* schwer verwundet */
+     color:                   #FF5555;
+}
+
+
+
+.rep_resource {
+  font-size: 80%;
+  color: #333333;
+}
+
+
+.rep_mana_cost
+             {                             /* Manakosten */
+     color:                   #22CC22;
+}
+.rep_morale_loss
+             {                             /* Moral */
+     color: #A0C0E0;
+     font-weight: bold;
+}
+
+
+/* Erfolgsgrade (Fehlschlag/Treffer/Guter Erfolg/Kritischer Erfolg*/
+.rep_miss
+           {
+     color:                   #FF5555;
+}
+.rep_hit
+            {
+}
+.rep_hit_good
+       {
+     font-style:              italic;
+}
+.rep_hit_crit
+       {
+     font-weight:             bold;
+}
+
+/*********************************************************
+ * Board                                                 *
+ *********************************************************/
+
+.boardcon2.boardoption {
+    vertical-align: middle;
+    padding: 9px;
+}
+
+td.boardtext {
+    max-width: 600px;
+}
+div.boardtext {
+    width: 100%;
+    overflow: auto;
+}
+
+
+
+TABLE.boardmain     {
+     border-style:            none;
+     width:                   100%;
+}
+
+TABLE.boardmain > tr > TD,
+TABLE.boardmain > * > tr > TD {
+    border: 1px solid #707070;
+    border-collapse: collapse;
+}
+
+
+TABLE.boardspacer   {
+     border-style:            none;
+     width:                   100%;
+}
+
+TR.boardhead        {
+     background-color:        #4C3F2D;
+     border-style:            none;
+}
+
+TR.boardforum,
+TR.boardcon1        {
+     border-style:            none;
+}
+TR.boardcon2        {
+     background-color:        #594935;
+}
+TR.boardcategory        {
+     border-style:            none;
+}
+
+/*  tr.standalone_category > td,
+    tr.parent_category > td,  */
+tr.boardforum.child_category > td {
+    /* background-color: #505050;*/
+}
+
+tr.boardcategory.child_category > td {
+    background-color: #66553d;
+}
+
+
+TR.boardtopic       {
+     height:                  1.5em;
+}
+
+TD.boardhead        {
+     color:                   #FFFFDD;
+     border-style:            none;
+}
+TD.boardcon1        {
+     background-color:        #4C3F2D;
+     border-style:            none;
+}
+TD.boardcon2        {
+     background-color:        #594935;
+}
+TR.boardcategory > TD   {
+     background-color:        #4C3F2D;
+}
+
+
+A:link.boardhot, A:visited.boardhot {
+     color:                   #F43E00;
+}
+A:link.boardclosed, A:visited.boardclosed {
+     color:                   #FFFFFF;
+}
+A:hover.boardhot    {
+     color:                   #F43E00;
+}
+A:hover.boardclosed {
+     color:                   #FFFFFF;
+}
+
+IMG.boardavatar     {
+     margin-top:              3px;
+     margin-bottom:           3px;
+}
+
+.boardtext          {                             /* Regular posting text */
+     font-size:               12px;
+}
+.boardedited        {                             /* Text for "last edited by x on y" */
+     font-size:               10px;
+     font-style:              italic;
+}
+.boardsignature     {
+     font-size:               12px;
+}
+.boardheadline      {
+     font-size:               13px;
+     font-weight:             bold;
+}
+.boardtitle         {
+     font-size:               15px;
+     font-weight:             bold;
+}
+.boardhot           {
+     color:                   #C03000;
+}
+
+.user_name          {
+     font-weight:             bold;
+     font-size:               14px;
+     font-family:             Arial, Helvetica, sans-serif;
+     text-decoration:         none;
+     color:                   #FFCF00;
+}
+.user_title         {
+     font-weight:             bold;
+     font-size:               14px;
+     font-family:             Arial, Helvetica, sans-serif;
+     text-decoration:         none;
+     color:                   #FFFFFF;
+}
+
+
+
+.admin_title        {
+     font-size:               14px;
+     font-family:             Arial, Helvetica, sans-serif;
+     text-decoration:         none;
+     color:                   #22CC22;
+}
+
+.board_goal {
+    height: 24px;
+}
+
+.board_goal_text {
+  font-size: 12pt;
+  font-weight: bold;
+}
+
+.board_goal_icon {
+  position: relative;
+  top: 5px;
+}
+
+.legegendenstatus {
+     color:                   #FF9603;
+}
+
+.boardworld         {
+     color:                   #97FF35;
+     font-weight:             bold;
+}
+
+
+/*********************************************************
+ * BBCode
+ *********************************************************/
+
+.table_bbcode {
+    padding: 3px;
+    border-style: solid;
+    border-color: gray;
+    border-width: 0px;
+    border-collapse: collapse;
+}
+
+
+.font_bbcode_h1         {
+     font-size:               1.5em;
+     color:                   #FFFFFF;
+     font-weight:             bold;
+}
+.font_bbcode_h2         {
+     font-size:               1.25em;
+     color:                   #FFFFFF;
+     font-weight:             bold;
+}
+.font_bbcode_h3         {
+     color:                   #FFFFFF;
+     font-weight:             bold;
+}
+
+.code               {
+        background-color:     #555555;
+        font-family:          "Courier New", courier, mono;
+        font-size:            12px;
+        border:               #606060;
+        border-style:         dashed;
+        border-width:         1px;
+}
+
+.quoteheader        {
+        font-family:          Verdana, Arial, Helvetica, sans-serif;
+        font-size:            12px;
+        font-weight:          bold;
+}
+.quotebody          {
+     background-color:        #555555;
+     border:                  #BBBBBB;
+     border-style:            dashed;
+     border-width:            1px;
+}
+
+.spoilerbutton      {
+        margin:               2px 0;
+        min-width:            30px;
+}
+.spoiler            {
+     overflow:              hidden;
+     border-style:          solid none none none;
+     border-width:          1px;
+     border-color:          #707070;
+}
+.spoilerbutton[value="+"] + .spoilerheader + .spoiler > div {
+        display:            none;
+}
+.spoilerbutton[value="-"] + .spoilerheader + .spoiler {
+        padding:            5px;
+}
+.spoilerbox         {
+    border-style:           dashed;
+    border-width:           1px;
+    border-color:           #A0A0A0;
+    background-color:       #555555;
+}
+.spoilerheader      {
+    font-family:    Verdana, Arial, Helvetica, sans-serif;
+    font-size:      12px;
+}
+
+
+.listitem {
+     padding-left: 0.2em;
+     margin-left: 0.7em;
+}
+
+.listbullet         {
+     list-style-type:         disc;
+}
+.listdecimal        {
+     list-style-type:         decimal;
+}
+.listlowerroman     {
+     list-style-type:         lower-roman;
+}
+.listupperroman     {
+     list-style-type:         upper-roman;
+}
+.listloweralpha     {
+     list-style-type:         lower-alpha;
+}
+.listupperalpha     {
+     list-style-type:         upper-alpha;
+}
+
+
+.postlink           {
+    font-family:              "Courier New", courier, mono;
+    font-size:                8px;
+    color:                    #AAAAAA;
+}
+
+/*********************************************************
+ * Mail
+ *********************************************************/
+
+.content_table.mail tr.row0,
+.content_table.mail tr.row1 {
+     background-color:        #594935;
+}
+
+.content_table.mail tr.selected {
+     background-color:        #715D43;
+}
+
+
+.buttons_below_table > td {
+     background-color:        #303030;
+}
+
+.buttons {
+    padding-right: 40px;
+}
+
+.mail_buttons_below_table {
+    margin-top: 0.3em;
+}
+
+.folder_standard    {
+        font-family:          Helvetica, sans-serif;
+        font-size:            11pt;
+        border-style:         none;
+        color:                #FFCF00;
+        background:           url(images/main-content/content-center.gif);
+        border-style:         none;
+}
+.folder_selected    {
+        font-family:          Helvetica, sans-serif;
+        font-size:            11pt;
+        background-color:     #4C3F2D;
+        border-style:         ridge;
+        border-color:         #FFCF00;
+        color:                #FFFFFF;
+}
+.folder_standard_unread {
+        font-family:          Helvetica, sans-serif;
+        font-size:            11pt;
+        background-color:     #715d43;
+        background:           url(images/main-content/content-center.gif);
+        border-style:         none;
+        color:                #FFCF00;
+        font-weight:          bold;
+        font-style:           normal;
+}
+.folder_selected_unread {
+        font-family:          Helvetica, sans-serif;
+        font-size:            11pt;
+        background-color:     #101010;
+        border-style:         ridge;
+        border-color:         #CC9900;
+        color:                #FFFFFF;
+        font-weight:          bold;
+        font-style:           normal;
+}
+.subject_standard   {
+        font-family:          Helvetica, sans-serif;
+        font-size:            11pt;
+        background-color:     #594935;
+        border-style:         none;
+        color:                #FFCF00;
+        left:                 0px;
+        font-weight:          normal;
+        font-style:           normal;
+}
+.subject_selected   {
+        font-family:          Helvetica, sans-serif;
+        font-size:            11pt;
+        border-style:         none;
+        border-color:         #CC9900;
+        color:                #FFFFFF;
+        font-weight:          normal;
+        font-style:           normal;
+}
+.subject_standard_unread {
+        font-family:          Helvetica, sans-serif;
+        font-size:            11pt;
+        border-style:         none;
+        color:                #FFCF00;
+        font-weight:          bold;
+}
+.subject_selected_unread {
+        font-family:          Helvetica, sans-serif;
+        font-size:            11pt;
+        background-color:     #303030;
+        border-style:         none;
+        border-color:         #CC9900;
+        font-weight:          bold;
+        color:                #FFFFFF;
+}
+
+
+
+/*********************************************************
+ * Battles - Clanquest
+ *********************************************************/
+.cq_map_fav_list {
+        border-style:       outset;
+        background-color:   #444444;
+
+}
+.cq_map_fav_element {
+        color:              #ffffff;
+        background-color:   #444444;
+}
+
+.cq_map_fav_element_selected {
+        color:              #ffffff;
+        border:             5px solid green;
+}
+
+.cq_map_field_info_title {
+    font-size:              11px;
+    font-weight:            bold;
+    color:                  #FFCF00;
+}
+
+.cq_map_field_info_subtitle {
+    font-size:              11px;
+    color:                  #FFFFFF;
+}
+
+.cq_map_field_info_text {
+    font-size:              11px;
+}
+
+/**********************************************************************
+ * ORDERS
+ **********************************************************************/
+
+ #orders h1, #orders h2, #orders h3, #orders h4, #orders h5, #orders h6 {
+  clear:                  both;
+ }
+
+ #orders h3                  {
+  border-width:           1px;
+  border-style:           solid;
+  border-color:           #666666;
+  background-color:       #333333;
+  padding:                0.2em 0.5em;
+ }
+
+ #orders h4                  {
+  margin:                 0.5em 0 0 0px;
+ }
+
+ #orders input               {
+  margin:                 4px;
+  background-color:       #505050;
+  border-width:           1px;
+  border-style:           solid;
+  border-color:           #999999;
+  color:                  #FFFFFF;
+  font-weight:            bold;
+ }
+
+ #orders input.numeric       {
+  width:                  3em;
+ }
+
+ #orders select              {
+  background-color:       #333333;
+  border-width:           1px;
+  border-style:           solid;
+  border-color:           #999999;
+  color:                  #FFFFFF;
+  font-weight:            bold;
+ }
+
+ #orders td                  {
+  vertical-align:         top;
+  text-align:             left;
+ }
+
+ #orders span.disabled, #orders div.disabled {
+  text-decoration:        line-through;
+ }
+
+ #orders span.inactive, #orders div.inactive {
+  font-style:             italic;
+  color:                  #CCCCCC;
+ }
+
+
+ #orders .warn {
+  color:                  #FF4444;
+ }
+
+
+ .wod-tabs           {
+  margin:                 10px 0px;
+  list-style:             none;
+  border-width:           1px;
+  border-style:           none none solid none;
+  border-color:           #999999;
+  padding:                5px;
+ }
+
+ .wod-tabs li        {
+  display:                inline;
+  background-color:       #333333;
+  color:                  white;
+  font-weight:            bold;
+  padding:                5px 20px;
+  margin:                 5px;
+  border-width:           1px;
+  border-style:           solid;
+  border-color:           #999999;
+  cursor:                 default;
+ }
+
+ .wod-tabs li.selected {
+  background-color:       #666666;
+ }
+
+ .wod-list           {
+ }
+
+ .wod-list-table     {
+  border-collapse:        collapse;
+ }
+
+ .wod-list-items     {
+  border-width:           1px;
+  border-style:           solid;
+  border-color:           #999999;
+  padding:                4px;
+ }
+
+ .wod-list-item      {
+  padding:                4px;
+  cursor:                 default;
+ }
+
+ .wod-list-item-selected {
+  padding:                4px;
+  background-color:       #666666;
+  cursor:                 default;
+ }
+
+ .wod-list-buttons   {
+  border-width:           1px;
+  border-style:           solid;
+  border-color:           #999999;
+  width:                  24px;
+  padding:                4px;
+ }
+
+ .wod-list-item-label-skill {
+  font-weight:            bold;
+ }
+
+ .wod-list-item-label-item {
+  font-size:              small;
+ }
+
+ .wod-list-item-label-ammo {
+  font-size:              small;
+ }
+
+ .wod-list-item-label-positions {
+  font-size:              small;
+ }
+
+ #orders img {
+     vertical-align: middle;
+ }
+
+
+/**********************************************************************
+ * AdvDropDown
+ **********************************************************************/
+
+#AdvDropDown
+{
+  height: 29px;
+  font-size: 12px;
+  text-align :left;
+  vertical-align:middle;
+  padding-left:0.0em;
+  padding-top:4px;
+  margin:0;
+}
+
+#AdvDropDown ul
+{
+  position: absolute;
+  padding: 0px;
+  margin: 0px;
+  list-style: none;
+  list-style-type: none;
+  vertical-align: middle;
+  /*background-color: #ffffff;
+
+  border-color: #999999;
+  border-width:1px;
+  border-style:solid;*/
+}
+
+#AdvDropDown ul li
+{
+  height: 24px;
+  width: 115px;
+  /*border-color: #999999;
+  border-width:1px;
+  border-style:solid;*/
+  position: relative;zoom: 1;
+  margin: 0px;
+
+  /* IE :hover silly javascript workaround */
+  behavior: url(../../base/listItemHover.htc);
+}
+
+.warn {
+  color:                  #FF4444;
+}
+
+#AdvDropDown ul li a
+{
+  display: block;
+  position: relative;zoom: 1;
+  padding: 4px 0.3em 4px 0.3em;
+  color: #000000;
+  background-color:#ffffff;
+  border-color: #CC9900;
+  border-width:1px;
+  border-style:solid;
+}
+
+#AdvDropDown img
+{
+  color: #ffffff;
+  text-decoration: none;
+  border:none;
+}
+
+#AdvDropDown ul li a:hover {
+    color: #ffffff;
+/*    background-color: #666666;*/
+}
+
+/* This one doesn't affect IE */
+#AdvDropDown ul li:hover > ul
+{
+    display: block;
+}
+
+#AdvDropDown ul ul
+{
+  border-color: #000000;
+  border-width:1px;
+  border-style:solid;
+}
+
+#AdvDropDown ul ul li
+{
+  float: none;
+  margin: 0px;
+  padding: 0em;
+}
+
+#AdvDropDown ul ul li a
+{
+    border: none;
+    padding-top: 0.2em;
+    margin: 0px;
+    font-size: 1.1em;
+    color:#000000;
+    background-color: #ffffff;
+    height: 1.3em;
+}
+
+#AdvDropDown ul ul li a:hover
+{
+    color: #ffffff;
+    text-decoration: none;
+    background-color: #000066;
+}
+
+
+/*hide all sublevels*/
+#AdvDropDown ul ul {
+    display: none;
+
+    /*border-color: #999999;
+    border-width:1px;
+    border-style:solid;*/
+}
+
+/**********************************************************************
+ * Items
+ **********************************************************************/
+
+
+div#headline {
+  padding: 0 1em;
+  min-width: 16em;
+}
+
+
+div#details {
+  float: left;
+  padding: 0 1em;
+  min-width: 16em;
+}
+
+div#image {
+  float: left;
+  padding: 0 1em;
+  margin: 0 0 1em 1em;
+  min-width: 16em;
+}
+
+div#link {
+  clear: both;
+  padding: 1em;
+  min-width: 16em;
+}
+
+
+
+
+.tab {
+  position:relative;zoom:1;
+  width: 100%;
+}
+
+.tab > .bar {
+    border-bottom: 2pt solid #352200;
+    height: 0;
+    clear: both;
+}
+
+.tab > ul {
+    list-style:none;
+    padding:0 0 0 0;
+    margin: 0;
+}
+
+.tab > ul > li {
+  background: transparent url(images/tabs/left.png) no-repeat scroll left top;
+  padding: 0 0 0 9px;
+  float: left;
+  font-weight: bold;
+  display: list-item;
+}
+
+.tab > ul > li.not_selected > a {
+  background: transparent url(images/tabs/right.png) no-repeat scroll right top;
+  display: block;
+  padding: 5px 15px 4px 6px;
+}
+
+.tab > ul > li.label {
+  background: transparent none repeat scroll 0 0;
+  margin: 0px;
+  margin-right:1em;
+  position:relative;
+  font-weight: bold;
+  vertical-align: top;
+}
+
+
+.tab > ul > li.selected {
+  color: white;
+  background: transparent url(images/tabs/left_on.png) no-repeat scroll 0 0;
+}
+
+.tab > ul > li.selected > a {
+  color: white;
+  background: transparent url(images/tabs/right_on.png) no-repeat scroll right top;
+  padding: 5px 15px 4px 6px;
+  display: block;
+}
+
+.tab > ul > li.not_selected:hover {
+  background-color: #555555;
+}
+
+.tab > content {
+    padding-top: 10px;
+    margin-top: 0;
+}
+
+
+
+.sub-tabs {
+    background: transparent url(images/subtabs/bg.png) repeat scroll right bottom;
+    padding-bottom: 2px;
+    margin-top: 0px;
+}
+
+.sub-tabs >  .label {
+    margin-top: 0px;
+    padding-top: 0px;
+    margin-right:  0px;
+    padding-right: 5px;
+    margin-left:  0px;
+    padding-left: 0px;
+    background: transparent url(images/subtabs/right.png) no-repeat scroll right top;
+ }
+
+ .sub-tabs >  .label.selected {
+    background: transparent url(images/subtabs/right_on.png) no-repeat scroll right top;
+ }
+
+.sub-tabs >  .label > a {
+    padding-left: 4px;
+    background: transparent url(images/subtabs/left.png) no-repeat scroll left top;
+}
+
+
+ .sub-tabs >  .label.selected > a {
+    color: black;
+    background: transparent url(images/subtabs/left_on.png) no-repeat scroll left top;
+}
+
+
+
+
+.item_unique
+{    /* unique Item*/
+     font-style:              italic;
+}
+.item_groupitem
+{    /* group Item*/
+
+}
+
+.gadget_scroll {
+  position: relative;
+  zoom:1;
+  overflow-y: auto;
+}
+
+#gadgettable-left-gadgets  > .gadget> .gadget_inner > .gadget_scroll,
+#gadgettable-right-gadgets > .gadget> .gadget_inner > .gadget_scroll,
+.menu > .gadget_inner > .gadget_scroll {
+    overflow-x: hidden;
+}
+
+
+
+/**********************************************************************
+ * Info line for popup windows
+ **********************************************************************/
+.popup_statusline {
+    border-bottom: thin solid #CCCCCC;
+    text-align: center;
+    background: url(images/background.jpg) repeat;
+}
+
+.popup_statusline_world {
+    padding: 10px;
+    float: left;
+}
+.popup_statusline_hero {
+    padding: 10px;
+}
+
+.popup_statusline_mail {
+    float: right;
+    padding: 10px;
+}
+
+.popup_statusline_clear {
+    clear: both;
+}
+
+.font_World_Name {
+    display: inline;
+}
+
+
+.gadget_body,
+.gadget_body > .block,
+.gadget_body > .block > .block_body {
+    height: 100%;
+    z-index: 2;
+    position: relative;
+}
+
+
+.background,
+.border-top,
+.border-bottom {
+    position: absolute;
+    z-index: -1;
+
+}
+
+.block > .block_body > .background     {
+    background: url(images/page/block_bg_body.png) 12px 0 repeat-y;
+    top:25px;
+    left:0px;
+    right:0px;
+    bottom:15px;
+}
+
+.block > .block_body > .border-top     {
+    background: url(images/page/block_bg_head.png) 12px 0 no-repeat;
+    top:0px;
+    left:0px;
+    right: 0px;
+    height: 25px;
+}
+
+.block > .block_body > .border-bottom     {
+    background: url(images/page/block_bg_foot.png) 12px 0 no-repeat;
+    bottom:0px;
+    left:0px;
+    right:0px;
+    height:25px;
+}
+
+#gadgettable-left-gadgets,
+#gadgettable-right-gadgets {
+    padding-bottom: 40px;
+}
+
+.gadget.diamonds  > .gadget_inner > .gadget_body > .block {
+    background: url(images/bg_diamonds.gif) no-repeat 12px 0px;
+    height: 38px;
+    text-align: center;
+    padding: 12px 20px 0px 20px;
+}
+
+.block_inner  {
+    z-index: 2;
+    padding-left: 22px;
+    padding-right: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#gadgettable-right-gadgets > .gadget {
+    margin-bottom: 5px;
+}
+
+.block_inner a,
+.hero_full a,
+.medals a {
+    color: #FFCF00;
+}
+
+.logo {
+    background: url(images/logo.gif) no-repeat 15px 22px;
+    width: 150px;
+}
+
+.buttons,
+.clock,
+.diamonds,
+.hero,
+.worlds {
+    padding-top: 12px;
+}
+
+#padding-top-left {
+    background-image: url(images/top_left.gif);
+    background-repeat: no-repeat;
+    background-position: left;
+    height: 120px;
+    width: 25%;
+}
+
+#padding-top-right {
+    background-image: url(images/top_right.gif);
+    background-repeat: no-repeat;
+    background-position: right;
+    height: 120px;
+    width: 25%;
+}
+
+/**********************************************************************
+ * Progress bar
+ **********************************************************************/
+
+.progressBar_container {
+    position: relative;
+    text-align: center;
+    width: 500px;
+    height: 32px;
+    display: inline-block;
+}
+.progressBar_black-on-white {
+    height: 32px;
+    color: white;
+    background-color: #999999;
+    background: url(images/progressbar_2.jpg) right;
+}
+.progressBar_white-on-black {
+    height: 32px;
+    color: white;
+    background-color: #b17320;
+    background: url(images/progressbar_1.jpg);
+}
+.progressBar_wrapper {
+    width: 0%; /* matches percent completed - e.g. width: 5% = 5% completed */
+    overflow: hidden;
+    position: absolute;
+    top: 0; left: 0;
+}
+.progressBar_black-on-white {
+    width: 100%;
+    padding-top: 5px;
+    height: 27px;
+}
+.progressBar_white-on-black {
+    width: 500px;
+    padding-top: 5px;
+    height: 27px;
+}
+
+#ad-table-top {
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+/**********************************************************************
+ * List selector
+ **********************************************************************/
+
+
+div.list_selector_container{
+    border: 5px ridge #816E36;
+    position: relative;
+    overflow: auto;
+    height: 6em;
+    width: 20em;
+    overflow: hidden;
+}
+
+
+div.list_selector_container > div.box {
+    position: absolute;
+    overflow: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 5px;
+    background-color: #664C2B;
+}
+
+div.list_selector_container > div.box > div.even {
+  width: 100%;
+  background-color: #462C1B;
+}
+
+div.list_selector_container > div.edit_button {
+    position: absolute;
+    right: 15px;
+    bottom: 0;
+}
+
+
+/**********************************************************************
+ * Arena
+ **********************************************************************/
+
+/* League is active */
+.arena_status_ok,
+.arena_status_ok a,
+.arena_status_ok a:link,
+.arena_status_ok a:visited,
+.arena_status_ok a:focus,
+.arena_status_ok a:hover,
+.arena_status_ok a:active {
+    color:                   lime;
+    font-weight:             bold;
+}
+
+/* League's last round ended within the last 3 days */
+.arena_status_warn_1,
+.arena_status_warn_1 a,
+.arena_status_warn_1 a:link,
+.arena_status_warn_1 a:visited,
+.arena_status_warn_1 a:focus,
+.arena_status_warn_1 a:hover,
+.arena_status_warn_1 a:active {
+    color:                   #FFCF00;
+    font-weight:             bold;
+}
+
+/* League's last round ended within the last 5 days */
+.arena_status_warn_2,
+.arena_status_warn_2 a,
+.arena_status_warn_2 a:link,
+.arena_status_warn_2 a:visited,
+.arena_status_warn_2 a:focus,
+.arena_status_warn_2 a:hover,
+.arena_status_warn_2 a:active {
+    color:                   #FF7F35;
+    font-weight:             bold;
+}
+
+/* League's last round ended within the last 14 days */
+.arena_status_warn_3,
+.arena_status_warn_3 a,
+.arena_status_warn_3 a:link,
+.arena_status_warn_3 a:visited,
+.arena_status_warn_3 a:focus,
+.arena_status_warn_3 a:hover,
+.arena_status_warn_3 a:active {
+    color:                   #FF0000;
+    font-weight:             bold;
+}
+
+/* League's last round ended more than 14 days ago */
+.arena_status_warn_4,
+.arena_status_warn_4 a,
+.arena_status_warn_4 a:link,
+.arena_status_warn_4 a:visited,
+.arena_status_warn_4 a:focus,
+.arena_status_warn_4 a:hover,
+.arena_status_warn_4 a:active {
+    color:                   #66DDFF;;
+    font-weight:             bold;
+}
+
+
+/**********************************************************************
+ * Search input fields above tables
+ **********************************************************************/
+.search_container {
+    border: 1px solid #4C3F2D;
+    border-collapse: collapse;
+    float: left;
+    margin-top: 0.5em;
+}
+.search_details {
+    border-top: 1px solid #4C3F2D;
+    padding: 0.5em;
+}
+
+/**********************************************************************
+ * Dungeon rating table
+ **********************************************************************/
+table.ratetable            {
+    border-collapse:         collapse;
+    border-left-width:       thin;
+    border-top-width:        thin;
+    border-left-style:       solid;
+    border-top-style:        solid;
+    border-color:            #909090;
+    background-color:         #555555;
+}
+table.ratetable > * > tr > td,
+table.ratetable > * > tr > th {
+    text-align: left;
+    border-bottom-width:     thin;
+    border-right-width:      thin;
+    border-right-style:      solid;
+    border-bottom-style:     solid;
+    border-color:            #909090;
+    background-color:         #555555;
+    border-left-style:       none;
+    border-top-style:        none;
+    padding:                 1mm;
+    color:                   #FFFFFF;
+}
+
+
+
+

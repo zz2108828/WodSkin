@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+<font-profiles image-format="gif">
+
+
+  <profile name="font_menu-1">
+    <image width='130' height='60'/>
+    <font name='VeraSeBd.ttf' size='14' color='#c47c34' yOffset='18' shrinkToFit='true'/>
+    <trim x='true'/>
+    <gradient colorTop='rgba(190,120,50,0.9)' colorBottom='rgba(215,215,215,0.5)' 
+              offsetTop='0.5' offsetBottom='0' composite='SRC_ATOP'/>
+    <shadow color='rgb(2,2,2)' overlay='1' blur='1' dx='0' dy='0'/>
+    <shadow color='rgb(2,2,2)' overlay='1' blur='3' dx='0' dy='0'/>
+    <shadow color='rgb(2,2,2)' overlay='1' blur='5' dx='0' dy='0'/>
+    <hsb-adjust saturation='0' brightness='0.1'/>
+  </profile>
+
+  <profile name="font_menu-1-hovered">
+    <image width='130' height='60'/>
+    <font name='VeraSeBd.ttf' size='14' color='#c47c34' yOffset='18' shrinkToFit='true'/>
+    <trim x='true'/>
+    <gradient colorTop='rgba(190,120,50,0.9)' colorBottom='rgba(215,215,215,0.5)' 
+              offsetTop='0.5' offsetBottom='0' composite='SRC_ATOP'/>
+    <shadow color='rgb(2,2,2)' overlay='1' blur='1' dx='0' dy='0'/>
+    <shadow color='rgb(2,2,2)' overlay='1' blur='3' dx='0' dy='0'/>
+    <shadow color='rgb(2,2,2)' overlay='1' blur='5' dx='0' dy='0'/>
+    <hsb-adjust saturation='0' brightness='0.3'/>
+  </profile>
+
+  <profile name="font_menu-1-selected">
+    <image width='130' height='60'/>
+    <font name='VeraSeBd.ttf' size='14' color='rgb(255,215,0)' antialiasing='1' yOffset='18' shrinkToFit='true' bold='false'/>
+    <trim x='true'/>
+    <gradient colorTop='rgba(128,128,128,0.5)' colorBottom='rgba(255,255,255,0.9)' 
+              offsetTop='0.25' offsetBottom='0.1' composite='SRC_ATOP'/>
+    <shadow color='rgb(2,2,2)' overlay='1' blur='1' dx='0' dy='0'/>
+    <shadow color='rgb(2,2,2)' overlay='1' blur='3' dx='0' dy='0'/>
+    <shadow color='rgb(2,2,2)' overlay='1' blur='5' dx='0' dy='0'/>
+    <hsb-adjust saturation='0' brightness='0.1'/>
+  </profile>
+  
+  <profile name="font_Hero_Name">
+    <image width='152' height='60'/>
+    <font name='VeraSeBd.ttf' size='28' color='#FFD700' yOffset='0' shrinkToFit='true' paddingX='6'/>
+    <gradient colorTop='rgba(180,154,0,0.9)' colorBottom='rgba(255,255,0,0.2)' 
+              offsetTop='0.1' offsetBottom='0.1' composite='SRC_ATOP'/>
+    <shadow color='rgb(20,20,20)' overlay='1' blur='1' dx='0' dy='0'/>
+    <shadow color='rgb(20,20,20)' overlay='1' blur='3' dx='0' dy='0'/>
+    <shadow color='rgb(20,20,20)' overlay='1' blur='5' dx='0' dy='0'/>
+    <hsb-adjust saturation='0' brightness='0.1'/>
+    <trim x='false'/>
+  </profile>
+  
+  <profile name="font_Hero_Title font_Hero_Race">
+    <image width='140' height='40'/>
+    <font name='VeraSeBd.ttf' size='15' color='rgb(255,255,221)' yOffset='0' xOffset='0' shrinkToFit='true'/>
+    <shadow color='rgb(52,32,2)' overlay='1' blur='1' dx='0' dy='0'/>
+    <shadow color='rgb(52,32,2)' overlay='1' blur='4' dx='0' dy='0'/>
+    <trim x='true'/>
+  </profile>
+  
+  <profile name="font_Hero_Class">
+    <image width='98' height='50'/>
+    <font name='VeraSeBd.ttf' size='15' color='rgb(255,255,221)' yOffset='0' xOffset='0' shrinkToFit='true'/>
+    <shadow color='rgb(52,32,2)' overlay='1' blur='1' dx='0' dy='0'/>
+    <shadow color='rgb(52,32,2)' overlay='1' blur='4' dx='0' dy='0'/>
+    <trim x='true'/>
+  </profile>
+  
+  <profile name="font_Hero_Level">
+    <image width='40' height='50'/>
+    <font name='VeraSeBd.ttf' size='15' color='rgb(255,255,221)' yOffset='0' xOffset='0' shrinkToFit='true'/>
+    <shadow color='rgb(52,32,2)' overlay='1' blur='1' dx='0' dy='0'/>
+    <shadow color='rgb(52,32,2)' overlay='1' blur='4' dx='0' dy='0'/>
+    <trim x='false'/>
+  </profile>
+
+</font-profiles>
